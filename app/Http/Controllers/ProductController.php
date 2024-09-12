@@ -16,12 +16,6 @@ class ProductController extends Controller
         return view('product.index',compact('products'));
     }
 
-    public function __construct()
-    {
-    $this->middleware('auth', ['only' => ['create', 'store', 'edit', 'delete']]);
-    // or
-    $this->middleware('auth', ['except' => ['index', 'show']]);
-    }
 
     /**
      * Show the form for creating a new resource.
